@@ -10,11 +10,11 @@
   <label name="company">What is the <strong>company</strong>, if you are able to tell me?</label>
   <input name="company" type="text">
 
-  <label name="description">Describe the {{description_noun}}</label>
+  <label name="description">Describe the {{description_noun}}.</label>
   <textarea placeholder="Write about the {{description_noun}}, or provide a link to a description."
             name="description"></textarea>
 
-  <label name="pay">{{pay_label}}</label>
+  <label name="pay">{{!pay_label}}</label>
   <select name="pay">
     % for option in pay_options:
     <option value="{{option}}">{{option}}</option>
@@ -30,7 +30,7 @@
   % end
 
   <label name="initiative">{{initiative_label}}</label>
-  <input type="text" name="initiative" />
+  <textarea name="initiative" placeholder="{{initiative_placeholder}}" /></textarea>
 
   <input type="hidden" name="kind" value="{{category}}" />
 

@@ -22,14 +22,15 @@ def consultant():
         'category': 'consultant',
         'category_pretty': 'a consultant',
         'description_noun': 'project',
-        'pay_label': 'What is your budget? (Choose the closest one.)',
+        'pay_label': 'What is your <strong>budget</strong>? (Choose the closest one.)',
         'pay_options': [
             '$4,000',
             '$16,000',
             '$64,000',
             '$256,000 (or more)',
         ],
-        'initiative_label': 'Why are you interested in conducting this project? For example, is this part of a larger initiative?',
+        'initiative_label': 'Why are you interested in conducting this project?',
+        'initiative_placeholder': 'For example, is this part of a larger initiative?',
     }
 
 @app.route('/employee')
@@ -39,14 +40,15 @@ def employee():
         'category': 'employee',
         'category_pretty': 'an employee',
         'description_noun': 'position',
-        'pay_label': 'What is the salary? (Choose the closest one.)',
+        'pay_label': 'What is the <strong>salary</strong>? (Choose the closest one.)',
         'pay_options': [
             '$64,000',
             '$128,000',
             '$256,000',
             '$512,000',
         ],
-        'initiative_label': 'Why are you interested in conducting this project? For example, is this part of a larger initiative?',
+        'initiative_label': 'Why are you interested in hiring for this position at this time?',
+        'initiative_placeholder': 'For example, is it for a new project, because of recent investment, &c.?',
     }
 
 @app.route('/submit')
