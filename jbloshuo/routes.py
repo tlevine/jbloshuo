@@ -14,13 +14,20 @@ app = Bottle()
 @app.route('/')
 @view('home')
 def home():
-    print(dict(request.params))
     return {}
 
 @app.route('/consultant')
 @view('form')
 def consultant():
+    p = request.params.get
     return {
+        'name_value': p('name', ''),
+        'email_value': p('email', ''),
+        'company_value': p('company', ''),
+        'description_value': p('description', ''),
+        'initiative_value': p('initiative', ''),
+
+        'error_message': p('error-message'),
         'category': 'consultant',
         'category_pretty': 'a consultant',
         'description_noun': 'project',
@@ -38,7 +45,15 @@ def consultant():
 @app.route('/employee')
 @view('form')
 def employee():
+    p = request.params.get
     return {
+        'name_value': p('name', ''),
+        'email_value': p('email', ''),
+        'company_value': p('company', ''),
+        'description_value': p('description', ''),
+        'initiative_value': p('initiative', ''),
+
+        'error_message': p('error-message'),
         'category': 'employee',
         'category_pretty': 'an employee',
         'description_noun': 'position',
@@ -76,8 +91,13 @@ def submit():
     if data['category'] not in KINDS:
         data['category'] = None
 
-    if None in data.values():
+    if data['category'] == None:
+        abort(400, 'Something went rather wrong. Try sending me an email instead.')
+    elif None in data.values():
         data['error-message'] = 'Fill in all the fields.'
+        for k, v in data.items():
+            if v == None:
+                data[k] = ''
         redirect('/%s?%s' % (data['category'], urlencode(data)))
     else:
         return {}
