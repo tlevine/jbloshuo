@@ -9,7 +9,7 @@
   Do you want to hire a consultant (short-term or maybe part-time)
   or an employee?
 </p>
-<ul>
+<ul class="job-type">
   <li><a href="consultant">Consultant</a></li>
   <li><a href="employee">Employee</a></li>
 </ul>

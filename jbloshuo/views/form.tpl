@@ -1,13 +1,13 @@
 % rebase('base.tpl', title = "Hire " + category_pretty)
 <h1>Hire {{category_pretty}}</h1>
 <form>
-  <label name="name">What is your name?</label>
+  <label name="name">What is your <strong>name</strong>?</label>
   <input name="name" type="text" />
 
-  <label name="email">What is your email address?</label>
+  <label name="email">What is your <strong>email address</strong>?</label>
   <input name="email" type="email" />
 
-  <label name="company">What is the company, if you are able to tell me?</label>
+  <label name="company">What is the <strong>company</strong>, if you are able to tell me?</label>
   <input name="company" type="text">
 
   <label name="description">Describe the {{description_noun}}</label>
@@ -22,7 +22,7 @@
   </select>
 
   % if category == 'employee':
-  <label name="time">Is this position part-time or full-time?</label>
+  <label name="time">Is this position <strong>part-time or full-time</strong>?</label>
   <select name="time">
     <option value="part-time">Part-time</option>
     <option value="full-time">Full-time</option>
