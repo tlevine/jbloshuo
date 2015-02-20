@@ -32,6 +32,9 @@ a:hover { text-decoration: underline; }
   width: 160px;
 }
 
+.error { text-align: center; color: #57feb3; font-size: 3em;
+         font-weight: bold; text-decoration: underline; }
+
 label, input { margin: 0; padding: 0; display: block; }
 label { margin-bottom: 0.5em; }
 
