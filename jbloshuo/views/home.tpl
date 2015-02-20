@@ -1,13 +1,14 @@
 % rebase('base.tpl', title = "Tom Jobs")
 <h1>Jobs</h1>
 <p>
-  Do you want someone to do some work for you? Maybe Tom can do it.
-  Or maybe he knows someone else who can. Fill out the appropriate
-  form, and Tom will get back to you.
+  Do you want someone to do some work for you?
+  <a href="http://thomaslevine.com">Thomas</a> might be able to do it,
+  or he might know someone else who can. Answer a few questions here,
+  and Tom will get back to you.
 </p>
 <p>
-  Do you want to hire a consultant (short-term or maybe part-time)
-  or an employee?
+  Do you want to hire a <strong>consultant</strong>
+  or an <strong>employee</strong>?
 </p>
 <div class="job-type">
   <a href="consultant">Consultant</a>
