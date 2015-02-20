@@ -1,4 +1,4 @@
-% rebase('base.tpl', title = "Hire" + category_pretty)
+% rebase('base.tpl', title = "Hire " + category_pretty)
 <h1>Hire {{category_pretty}}</h1>
 <form>
   <label name="name">What is your name?</label>
