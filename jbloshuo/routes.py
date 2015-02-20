@@ -5,7 +5,9 @@ from urllib.parse import urlencode
 from bottle import Bottle, request, response, \
                    abort, redirect, \
                    view, TEMPLATE_PATH, \
-                   static_file
+                   static_file, template
+
+from .email import send_email
 
 LIB_DIR = os.path.split(__file__)[0]
 TEMPLATE_PATH.append(os.path.join(LIB_DIR, 'views'))
@@ -76,11 +78,10 @@ FIELDS = ['category',
           'name', 'email', 'company',
           'pay', 'time',
           'description', 'initiative']
-TIMES = {'full-time', 'part-time'}
+TIMES = {'Full-time', 'Part-time'}
 KINDS = {'employee', 'consultant'}
 
 @app.post('/submit')
-@view('submit')
 def submit():
     data = dict(request.forms)
     if 'submit' in data:
@@ -104,7 +105,8 @@ def submit():
                 data[k] = ''
         redirect('/%s?%s' % (data['category'], urlencode(data)))
     else:
-        return {}
+        send_email(data)
+        return template('submit')
 
 @app.route('/style.css')
 def css():
