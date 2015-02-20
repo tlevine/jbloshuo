@@ -32,5 +32,7 @@
   <label name="initiative">{{initiative_label}}</label>
   <input type="text" name="initiative" />
 
-  <input type="submit" name="kind" value="{{category}}" />
+  <input type="hidden" name="kind" value="{{category}}" />
+
+  <input type="submit" name="kind" value="Submit" />
 </form>

@@ -10,27 +10,25 @@ h1, strong, a, a:visited, a:hover { color: #fe57a1; }
 strong, a, a:visited { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-ul.job-type { height: 4em; width: 100%; margin: 0; padding: 0; display: block; }
-ul.job-type > li {
-  list-style: none;
-  float: left;
-  margin: 0;
-  height: 2em;
-}
-ul.job-type > li > a {
-  color: white !important;
-  height: 1.5em;
-  padding-top: 0.75em;
-  padding-bottom: 1em;
+.job-type { height: 3.5em; margin-top: 2em; }
+.job-type > a {
+  color: white;
+  font-weight: bold;
   background-color: #fe57a1;
   text-align: center;
 
+  height: 1.25em;
+  padding-top: 0.75em;
+  padding-bottom: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+
+  padding-right: 20px;
+  padding-left: 20px;
   margin-left: 40px;
   margin-right: 40px;
   width: 160px;
-}
-ul.job-type > li:first-child {
-  margin-right: 0px;
 }
 
 label, input { margin: 0; padding: 0; display: block; }
@@ -39,3 +37,4 @@ label { margin-bottom: 0.5em; }
 body { width: 440px; margin-left: auto; margin-right: auto; }
 textarea, input[type=text], input[type=email], select { width: 100%; margin-bottom: 1.5em; }
 textarea { height: 14em; }
+input[type=submit] { width: 80px; margin-left: auto; margin-right: auto; }

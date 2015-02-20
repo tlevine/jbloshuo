@@ -9,10 +9,10 @@
   Do you want to hire a consultant (short-term or maybe part-time)
   or an employee?
 </p>
-<ul class="job-type">
-  <li><a href="consultant">Consultant</a></li>
-  <li><a href="employee">Employee</a></li>
-</ul>
+<div class="job-type">
+  <a href="consultant">Consultant</a>
+  <a href="employee">Employee</a>
+</div>
 <p>
   If neither of these categories seems quite right,
   choose whichever seems closest, or just explain your situation in
