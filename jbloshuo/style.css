@@ -4,6 +4,7 @@ body { margin-top: 0; margin-bottom: 0;
        font-family: 'Nimbus Sans', Helvetica, Arial, sans-serif; }
 
 h1, p { font: inherit; margin: 0; padding: 0; }
+h1 { margin-bottom: 0.25em; }
 p { margin-bottom: 0.5em; }
 h1 { text-align: center; font-size: 2em; font-weight: bold; }
 h1, strong, a, a:visited, a:hover { color: #fe57a1; } 
@@ -36,5 +37,6 @@ label { margin-bottom: 0.5em; }
 
 body { width: 440px; margin-left: auto; margin-right: auto; }
 textarea, input[type=text], input[type=email], select { width: 100%; margin-bottom: 1.5em; }
+select { width: 50%; }
 textarea { height: 14em; }
 input[type=submit] { width: 80px; margin-left: auto; margin-right: auto; }

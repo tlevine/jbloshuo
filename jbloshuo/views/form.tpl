@@ -1,6 +1,6 @@
 % rebase('base.tpl', title = "Hire " + category_pretty)
 <h1>Hire {{category_pretty}}</h1>
-<form>
+<form method="post" action="submit">
   <label name="name">What is your <strong>name</strong>?</label>
   <input name="name" type="text" />
 
@@ -16,6 +16,7 @@
 
   <label name="pay">{{!pay_label}}</label>
   <select name="pay">
+    <option value="empty">Choose the closest one.</option>
     % for option in pay_options:
     <option value="{{option}}">{{option}}</option>
     % end

@@ -22,7 +22,7 @@ def consultant():
         'category': 'consultant',
         'category_pretty': 'a consultant',
         'description_noun': 'project',
-        'pay_label': 'What is your <strong>budget</strong>? (Choose the closest one.)',
+        'pay_label': 'What is your <strong>budget</strong>?',
         'pay_options': [
             '$4,000',
             '$16,000',
@@ -40,7 +40,7 @@ def employee():
         'category': 'employee',
         'category_pretty': 'an employee',
         'description_noun': 'position',
-        'pay_label': 'What is the <strong>salary</strong>? (Choose the closest one.)',
+        'pay_label': 'What is the <strong>salary</strong>?',
         'pay_options': [
             '$64,000',
             '$128,000',
@@ -51,7 +51,7 @@ def employee():
         'initiative_placeholder': 'For example, is it for a new project, because of recent investment, &c.?',
     }
 
-@app.route('/submit')
+@app.post('/submit')
 @view('submit')
 def submit():
     return {}
