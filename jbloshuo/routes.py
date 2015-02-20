@@ -26,6 +26,8 @@ def consultant():
         'company_value': p('company', ''),
         'description_value': p('description', ''),
         'initiative_value': p('initiative', ''),
+        'pay_value': p('pay'),
+        'time_value': p('time'),
 
         'error_message': p('error-message'),
         'category': 'consultant',
@@ -52,6 +54,8 @@ def employee():
         'company_value': p('company', ''),
         'description_value': p('description', ''),
         'initiative_value': p('initiative', ''),
+        'pay_value': p('pay'),
+        'time_value': p('time'),
 
         'error_message': p('error-message'),
         'category': 'employee',

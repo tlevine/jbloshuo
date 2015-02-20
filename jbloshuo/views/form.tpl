@@ -21,16 +21,17 @@
   <select name="pay">
     <option value="empty">Choose the closest one.</option>
     % for option in pay_options:
-    <option value="{{option}}">{{option}}</option>
+    <option value="{{option}}" {{'selected' if option == pay_value else ''}}>{{option}}</option>
     % end
   </select>
 
   % if category == 'employee':
   <label name="time">Is this position <strong>part-time or full-time</strong>?</label>
   <select name="time">
-    <option value="empty"></option>
-    <option value="part-time">Part-time</option>
-    <option value="full-time">Full-time</option>
+    <option value="empty">Choose the more accurate one.</option>
+    % for option in ['Part-time', 'Full-time']:
+      <option value="{{option}}" {{'selected' if option == time_value else ''}}>{{option}}</option>
+    % end
   </select>
   % end
 
@@ -41,3 +42,4 @@
 
   <input type="submit" name="submit" value="Submit" />
 </form>
+<p>Or go <a href="/">back</a>.</p>
