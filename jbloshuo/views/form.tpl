@@ -33,7 +33,7 @@
   <label name="initiative">{{initiative_label}}</label>
   <textarea name="initiative" placeholder="{{initiative_placeholder}}" /></textarea>
 
-  <input type="hidden" name="kind" value="{{category}}" />
+  <input type="hidden" name="category" value="{{category}}" />
 
-  <input type="submit" name="kind" value="Submit" />
+  <input type="submit" name="submit" value="Submit" />
 </form>

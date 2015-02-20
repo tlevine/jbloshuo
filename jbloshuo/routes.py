@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+from urllib.parse import urlencode
 
 from bottle import Bottle, request, response, \
                    abort, redirect, \
@@ -13,6 +14,7 @@ app = Bottle()
 @app.route('/')
 @view('home')
 def home():
+    print(dict(request.params))
     return {}
 
 @app.route('/consultant')
@@ -51,10 +53,34 @@ def employee():
         'initiative_placeholder': 'For example, is it for a new project, because of recent investment, &c.?',
     }
 
+FIELDS = ['category',
+          'name', 'email', 'company',
+          'pay', 'time',
+          'description', 'initiative']
+TIMES = {'full-time', 'part-time'}
+KINDS = {'employee', 'consultant'}
+
 @app.post('/submit')
 @view('submit')
 def submit():
-    return {}
+    data = dict(request.forms)
+    if 'submit' in data:
+        del(data['submit'])
+
+    for field in FIELDS:
+        if field not in data or data[field] == '':
+            data[field] = None
+
+    if data['time'] not in TIMES:
+        data['time'] = None
+    if data['category'] not in KINDS:
+        data['category'] = None
+
+    if None in data.values():
+        data['error-message'] = 'Fill in all the fields.'
+        redirect('/%s?%s' % (data['category'], urlencode(data)))
+    else:
+        return {}
 
 @app.route('/style.css')
 def css():
