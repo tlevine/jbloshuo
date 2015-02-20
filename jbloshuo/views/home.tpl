@@ -1,4 +1,4 @@
-% rebase('base.tpl', title = "Tom's public emails")
+% rebase('base.tpl', title = "Tom Jobs")
 <h1>Jobs</h1>
 <p>
   Do you want someone to do some work for you? Maybe Tom can do it.
