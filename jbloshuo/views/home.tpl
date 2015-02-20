@@ -10,7 +10,7 @@
   or an employee?
 </p>
 <ul>
-  <li><a href="consulting">Consultant</a></li>
+  <li><a href="consultant">Consultant</a></li>
   <li><a href="employee">Employee</a></li>
 </ul>
 <p>

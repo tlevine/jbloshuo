@@ -10,7 +10,7 @@
   <label name="company">What is the company, if you are able to tell me?</label>
   <input name="company" type="text">
 
-  <label name="description">{{description_label}}</label>
+  <label name="description">Describe the {{description_noun}}</label>
   <textarea placeholder="Write about the {{description_noun}}, or provide a link to a description."
             name="description"></textarea>
 
